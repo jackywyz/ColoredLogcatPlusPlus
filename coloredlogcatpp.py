@@ -149,7 +149,8 @@ while True:
                 replace = RULES[matcher]
                 message = matcher.sub(replace, message)
 
-            linebuf.write(message)
+
+            linebuf.write("%s%s" % (format(fg=color),message))
             line = linebuf.getvalue()
 
         print line
